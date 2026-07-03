@@ -142,7 +142,7 @@ router.post("/", requireAuth, async (req, res) => {
     // -----------------------------
     // 2. Call Gemini (ONLY ONCE)
     // -----------------------------
-    sourceText = sourceText.substring(0, 15000);
+    sourceText = sourceText.substring(0, 5000);
     result = await generateContent(
       masterPrompt(sourceText)
     );
